@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int i = 0, x, count = 0;
+    cout << "Введите длину массива:";
+    cin >> x;
+    int* A = new int[x];
+    for (int i = 0; i < x; i++) {
+        cout << "Введите " << i + 1 << " элемент:";
+        cin >> A[i];
+    }
+    for (i = 0; i < x; i++) {
+        if (A[i] != 0) {
+            count++;
+        }
+    }
+    cout << "Элементов, не равных нулю получилось: " << count;
+    return 0;
+}
